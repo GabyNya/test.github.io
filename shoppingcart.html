@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Web Store Theme - Checkout</title>
-<meta name="keywords" content="web store, checkout, free ecommerce templates, store templates, CSS, HTML" />
-<meta name="description" content="Web Store Theme, Checkout, free CSS template provided by templatemo.com" />
+<title>Web Store Theme - Shopping Cart</title>
+<meta name="keywords" content="web store, shopping cart, free templates, ecommerce templates, CSS, HTML" />
+<meta name="description" content="Web Store, Shopping Cart, free CSS template by templatemo.com" />
 <link href="css/templatemo_style.css" rel="stylesheet" type="text/css" />
 
 <link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css" />
@@ -30,10 +30,13 @@ ddsmoothmenu.init({
 	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
 })
 
+</script>
+
+<script language="javascript" type="text/javascript">
 function clearText(field)
 {
-    if (field.defaultValue == field.value) field.value = '';
-    else if (field.value == '') field.value = field.defaultValue;
+	if (field.defaultValue == field.value) field.value = '';
+	else if (field.value == '') field.value = field.defaultValue;
 }
 </script>
 
@@ -65,7 +68,7 @@ function clearText(field)
     <div id="templatemo_menu" class="ddsmoothmenu">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a>
+            <li><a href="products.html" class="selected">Products</a>
                 <ul>
                     <li><a href="#">Sub menu 1</a></li>
                     <li><a href="#">Sub menu 2</a></li>
@@ -82,11 +85,12 @@ function clearText(field)
               </ul>
             </li>
             <li><a href="faqs.html">FAQs</a></li>
-            <li><a href="checkout.html" class="selected">Checkout</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
         <br style="clear: left" />
     </div> <!-- end of templatemo_menu -->
+    
     <div class="cleaner h20"></div>
     <div id="templatemo_main_top"></div>
     <div id="templatemo_main">
@@ -119,46 +123,48 @@ function clearText(field)
         </div> <!-- END of sidebar -->
        
         <div id="content">
-       		<h2>Checkout</h2>
-            <h5><strong>BILLING DETAILS</strong></h5>
-            <div class="col col_13 checkout">
-				Enter your full name as it is on the credit card:                				<input type="text"  style="width:300px;"  />
-                Address:
-                <input type="text"  style="width:300px;"  />
-                City:
-                <input type="text"  style="width:300px;"  />
-                Country:
-                <input type="text"  style="width:300px;"  />
-            </div>
+		
+        	<table width="700px" cellspacing="0" cellpadding="5">
+                   	  <tr bgcolor="#CCCCCC">
+                        	<th width="220" align="left">Image </th> 
+                        	<th width="180" align="left">Description </th> 
+                       	  	<th width="100" align="center">Quantity </th> 
+                        	<th width="60" align="right">Price </th> 
+                        	<th width="60" align="right">Total </th> 
+                        	<th width="90"> </th>
+                            
+                      </tr>
+                    	<tr>
+                        	<td><img src="images/product/01.jpg" alt="image 01" /></td> 
+                        	<td>Etiam in tellus</td> 
+                            <td align="center"><input type="text" value="1" style="width: 20px; text-align: right" /> </td>
+                            <td align="right">$100 </td> 
+                            <td align="right">$100 </td>
+                            <td align="center"> <a href="#"><img src="images/remove_x.gif" alt="remove" /><br />Remove</a> </td>
+						</tr>
+                        <tr>
+                        	<td><img src="images/product/02.jpg" alt="image 02" /> </td>
+                            <td>Hendrerit justo</td> 
+                       	  	<td align="center"><input type="text" value="1" style="width: 20px; text-align: right" />  </td>
+                            <td align="right">$40  </td>
+                            <td align="right">$40 </td>
+                            <td align="center"> <a href="#"><img src="images/remove_x.gif" alt="remove" /><br />Remove</a>  </td>
+						</tr>
+                        <tr>
+                        	<td colspan="3" align="right"  height="40px">Have you modified your basket? Please click here to <a href="shoppingcart.html"><strong>Update</strong></a>&nbsp;&nbsp;</td>
+                            <td align="right" style="background:#ccc; font-weight:bold"> Total </td>
+                            <td align="right" style="background:#ccc; font-weight:bold">$140 </td>
+                            <td style="background:#ccc; font-weight:bold"> </td>
+						</tr>
+					</table>
+                    <div style="float:right; width: 215px; margin-top: 20px;">
+                    
+                        <div class="checkout"><a href="checkout.html" class="more">Proceed to Checkout</a></div>
+                        <div class="cleaner h20"></div>
+                        <div class="continueshopping"><a href="javascript:history.back()" class="more">Continue Shopping</a></div>
+                    	
+                    </div>
             
-            <div class="col col_13 checkout">
-            	E-MAIL
-				<input type="text"  style="width:300px;"  />
-                PHONE<br />
-				<span style="font-size:10px">Please, specify your reachable phone number. YOU MAY BE GIVEN A CALL TO VERIFY AND COMPLETE THE ORDER.</span>
-                <input type="text"  style="width:300px;"  />
-            </div>
-            
-            <div class="cleaner h50"></div>
-            <h3>Shopping Cart</h3>
-            <h4>TOTAL: <strong>$140</strong></h4>
-			<p><input type="checkbox" />I have accepted the <a href="#">Terms of Use</a>.</p>
-            <table style="border:1px solid #CCCCCC;" width="100%">
-                <tr>
-                    <td height="80px"> <img src="images/paypal.gif" alt="paypal" /></td>
-                    <td width="400px;" style="padding: 0px 20px;">Recommended if you have a PayPal account. Fastest delivery time.
-                    </td>
-                    <td><a href="#" class="more">PAYPAL</a></td>
-                </tr>
-                <tr>
-                    <td  height="80px"><img src="images/2co.gif" alt="paypal" />
-                    </td>
-                    <td  width="400px;" style="padding: 0px 20px;">2Checkout.com, Inc. is an authorized retailer of goods and services provided by Template-Guide.com. 2CheckOut accepts customer orders via online checks, Visa, MasterCard, Discover, American Express, Diners, JCB and debit cards with the Visa, Mastercard logo.
-                    </td>
-                    <td><a href="#" class="more">2CHECKOUT</a></td>
-                </tr>
-            </table>
-               
 		</div>
         <div class="cleaner"></div>
     </div> <!-- END of main -->
